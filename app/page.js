@@ -1,113 +1,73 @@
 import Image from 'next/image'
+import logo from '../constants/assets/images/logo.jpeg' 
+import pfp from '../constants/assets/images/pfp.jpg'
+import { RiPieChart2Fill, RiBarChartBoxFill } from 'react-icons/ri'
+import { TbArrowsTransferUp } from 'react-icons/tb' 
+import { BsFillDoorOpenFill } from 'react-icons/bs'
+import { IoWallet } from 'react-icons/io5'
+import background from '../constants/assets/images/background.jpeg'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div className="w-screen h-screen flex flex-col bg-slate-200  " >
+      <Image src={background} className="w-full h-20 object-cover" />
+      <div className="grid grid-cols-3" >
+        <div className="col-span-1  bg-white rounded-md flex flex-col mx-4 md:mx-8 xl:mx-12 xl:mr-20 mt-6  shadow-lg " >
+          <div className="flex justify-center items-center gap-2 mt-5 " >
+            <Image width={37} src={logo} alt="logo" className="rounded-full" />
+            <h1 className="text-black font-bold text-lg ">Zence</h1>
+          </div>
+
+          <div className="mt-8 flex flex-col justify-center items-center" >
+            <Image 
+              src={pfp} 
+              alt="profile-pic" 
+              className="rounded-full w-20 h-20 object-cover" 
             />
-          </a>
+            <h4 className=" text-gray-500 mt-2 text-sm font-medium " >Welcome back,</h4>
+            <h4 className="text-black font-semibold " >Jane Doe</h4>
+          </div>
+
+          <div className="flex flex-col mt-10 justify-center items-center">
+            <h1 className="text-black text-2xl">$52,491</h1>
+            <h4 className="text-gray-500 text-sm ">Monthly budget</h4>
+          </div>
+
+          <div className="justify-center items-baseline flex mt-20" >
+            <ul className="text-black text-sm font-semibold space-y-7 items-start flex flex-col  " >
+              <li className=" flex justify-center items-center gap-3 ">
+                <RiPieChart2Fill size={20} />
+                Dashboard
+              </li>
+
+              <li className=" flex justify-center items-center gap-3 text-gray-500">
+                <RiBarChartBoxFill size={20} />
+                Investments
+              </li>
+
+              <li className=" flex justify-center items-center gap-3 text-gray-500">
+                <TbArrowsTransferUp size={20} className="font-bold" />
+                Transactions
+              </li>
+              <li className=" flex justify-center text-gray-500 items-center gap-3">
+                <IoWallet size={20} />
+                Wallet
+              </li>
+              <li className=" flex justify-center items-center gap-3 pt-20 pb-8 text-gray-500">
+                <BsFillDoorOpenFill size={20} className="" />
+                Sign Out
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div className="col-span-1 bg-blue-300" >
+
+        </div>
+        <div className="col-span-1 bg-blue-600" >
+
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   )
 }
