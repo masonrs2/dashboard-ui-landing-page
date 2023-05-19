@@ -22,7 +22,7 @@ export default function Home() {
     <div className="w-screen h-full flex flex-col bg-slate-200  " >
       <Image src={background} className="w-full h-20 object-cover " />
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 " >
-        <div className="col-span-1 lg:col-span-2 bg-white rounded-md flex flex-col md:ml-6 lg:ml-0 mx-4 mr-6 mt-6 shadow-lg " >
+        <div className="col-span-1 lg:col-span-2 bg-white rounded-md flex flex-col md:ml-6 lg:ml-6 mx-4 mr-6 mt-6 shadow-lg " >
           <div className="flex justify-center items-center gap-2 mt-5 " >
             <Image width={37} src={logo} alt="logo" className="rounded-full" />
             <h1 className="text-black font-bold text-lg ">Zence</h1>
