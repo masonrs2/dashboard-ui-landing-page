@@ -5,7 +5,7 @@ import headshot4 from '../images/headshot4.jpg'
 import headshot5 from '../images/headshot5.jpg'
 import twitter from '../images/twitter.png'
 import spotify from '../images/spotify.png'
-import netflix from '../images/netflix.png'
+import netflix from '../images/Netflix.png';
 
 export const headshotItems = [
     {
