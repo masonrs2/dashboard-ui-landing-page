@@ -108,7 +108,7 @@ export default function Home() {
               <div className="h-2 w-2/3 rounded-full bg-black" ></div>
             </div>
 
-            <div className="flex gap-2 md:gap-3 lg:gap-4" >
+            <div className="flex gap-5 sm:gap-6 md:gap-3 lg:gap-4" >
               <div className="flex outline outline-1 outline-gray-400 rounded-md py-2 px-3 items-center justify-center gap-2 mt-6 " >
                 <Image className="w-10 h-9 md:w-16 md:h-10" src={greenLine} />
                 <div className="flex flex-col gap-1" >
