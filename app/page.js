@@ -215,8 +215,8 @@ export default function Home() {
 
             <div className="flex justify-between items-center mt-12 mb-8" >
               <h3 className="text-black font-bold" >Expenses Statistics</h3>
-              <div className="flex gap-2 text-gray-400 items-center " >
-                <h3 className="text-sm font-medium " >Week</h3>
+              <div className="flex gap-2 text-gray-400 items-center cursor-pointer hover:outline hover:outline-1 px-1 py-1 hover:outline-gray-200 hover:bg-gray-300/50 rounded-full" >
+                <h3 className="text-sm font-medium  " >Week</h3>
                 <MdKeyboardArrowDown size={20} />
               </div>
             </div>
